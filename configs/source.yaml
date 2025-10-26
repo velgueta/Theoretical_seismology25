@@ -1,0 +1,11 @@
+# Use either M_hat (explicit 3x3) or SDR parameters.
+# Here we set a simple DC with dominant Mxy like you printed earlier.
+M_hat:
+  - [  0.0, -1.0,  0.0]
+  - [ -1.0,  0.0,  0.0]
+  - [  0.0,  0.0,  0.0]
+
+M0: 1.0           # scalar scaling of the moment tensor (arbitrary units)
+fc: 2.0           # Hz (you can change here)
+shape: gamma2     # simple gamma(2) pulse for ṁ(t)
+src: [5000.0, 2000.0, 3000]   # ENZ, Z-up

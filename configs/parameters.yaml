@@ -1,0 +1,32 @@
+# Single config for the whole notebook
+parameters:
+  # --- Medium ---
+  rho:   2700.0           # kg/m^3
+  alpha: 6000.0           # m/s (P)
+  beta:  3464.0           # m/s (S)
+
+  # --- Source time params ---
+  fc:    2.0              # Hz
+  M0:    1.0e15           # N·m (scales M_hat below)
+
+  # --- Time ---
+  dt:    0.001            # s
+  tmax:  60.0             # s
+
+  # --- Geometry (ENU input; z is positive DOWN here) ---
+  src:        [5000.0, 2000.0, 3000.0]   # (x,y,z) with z>0 meaning depth
+  z_is_down:  true
+
+  # --- Station grid at surface (z=0) ---
+  grid:
+    nx: 5
+    ny: 4
+    origin_xy: [-5000.0, -5000.0]        # (x0, y0)
+    spacing: 500.0                       # meters
+    z: 0.0                               
+
+  # --- Moment tensor (unit DC in ENZ/Z-up); overall scale comes from M0 ---
+  M_hat:
+    - [  0.0, -1.0,  0.0 ]
+    - [ -1.0,  0.0,  0.0 ]
+    - [  0.0,  0.0,  0.0 ]

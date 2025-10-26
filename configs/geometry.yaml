@@ -1,0 +1,14 @@
+#geometry.yaml
+mode: normalized
+dt: 0.001
+tmax: 10.0
+center_xy: [5000.0, 2000.0]
+z_is_down: false
+
+# normalized geometry (used when mode = normalized)
+Delta_over_lamS: 0.25
+A_over_lamS: 4
+
+# station selection for plotting
+target_radius_factor: 1.5
+min_radius_factor: 1.0
